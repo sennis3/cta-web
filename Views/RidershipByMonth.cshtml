@@ -1,0 +1,63 @@
+@page
+@model RidershipByMonthModel
+@{  
+  var Labels = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Months);
+  var Totals = Newtonsoft.Json.JsonConvert.SerializeObject(Model.NumRiders);
+
+  ViewData["Title"] = "Total Ridership by Month";
+}  
+
+<h2>Total Ridership per Month</h2>  
+
+<br />
+Raw data: @Html.Raw(Totals)
+<br />
+<br />
+
+@{
+   if (@Model.EX != null)
+	 {
+	   <br />
+		 <br />
+		 <h3>**ERROR: @Model.EX.Message</h3>
+		 <br />
+		 <hr />
+		 <br />
+		 <br />
+	 }
+}
+
+<div class="box-body">  
+  <div class="chart-container">  
+     <canvas id="myChart"></canvas>  
+  </div>  
+</div>  
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+
+<script>
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: @Html.Raw(Labels),
+        datasets: [{
+            label: "# of riders",  
+            data: @Html.Raw(Totals),
+            borderColor: "blue",
+            pointBackgroundColor: "black",
+            backgroundColor: "yellow",
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>

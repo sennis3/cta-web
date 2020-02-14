@@ -1,0 +1,68 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/hjin/workspace/2019Fall-CS341/project07-web-app-CTA/Codio-release/project07/cta-web/program.csproj": {}
+  },
+  "projects": {
+    "/home/hjin/workspace/2019Fall-CS341/project07-web-app-CTA/Codio-release/project07/cta-web/program.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/hjin/workspace/2019Fall-CS341/project07-web-app-CTA/Codio-release/project07/cta-web/program.csproj",
+        "projectName": "program",
+        "projectPath": "/home/hjin/workspace/2019Fall-CS341/project07-web-app-CTA/Codio-release/project07/cta-web/program.csproj",
+        "packagesPath": "/home/hjin/.nuget/packages/",
+        "outputPath": "/home/hjin/workspace/2019Fall-CS341/project07-web-app-CTA/Codio-release/project07/cta-web/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/home/hjin/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@page
+@model GetStationInputModel
+@{
+  ViewData["Title"] = "Get Station Input";
+}
+
+<div class="container">  
+    <h2>Which stations(s) are you interested in?</h2>  
+    <hr />  
+    <br />  
+		<form action="StationInfo" method="get">
+				
+        <div class="row">  
+            <div class="col-md-4">  
+                <label asp-for="Input">Enter station name (full or partial):</label>  
+                <input asp-for="Input" class="form-control" />  
+            </div>  
+        </div>   
+				
+        <br />  
+        <input type="submit" value="Lookup" class="btn btn-primary" />  
+        <a class="btn btn-default" href="/">Cancel</a>  
+				
+    </form>
+</div>
+
